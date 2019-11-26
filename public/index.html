@@ -21,8 +21,14 @@
                 </select>
             </section>
             <section class="selected-country" v-if="selected != null">
+                <button v-on:click="onAddFavouriteClick">Save to favourite</button>
                 <h4>{{ selected.name }}</h4>
                 <img v-bind:src="selected.flag" v-bind:alt="selected.name">
+            </section>
+            <section class="favourite-countries">
+                <ul>
+                    <li v-for="country in favouriteCountries">{{country.name}}</li>
+                </ul>
             </section>
         </div>
     </body>

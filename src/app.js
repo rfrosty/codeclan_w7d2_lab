@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         data: {
             countries: [],
             selected: null,
+            favouriteCountries: []
         },
         computed: {
             totalPopulation: function() {
@@ -21,6 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then(response => response.json())
                 .then(data => this.countries = data)
                 .catch(console.log("Error while trying to fetch countries"));
+            },
+
+            onAddFavouriteClick: function() {
+                if (!this.favouriteCountries.includes(this.selected)) {
+                    this.favouriteCountries.push(this.selected);
+                }
             }
         }
     });
