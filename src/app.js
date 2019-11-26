@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     new Vue({
         el: "#app",
         data: {
-            countries: []
+            countries: [],
+            selected: {},
         },
         computed: {
             totalPopulation: function() {

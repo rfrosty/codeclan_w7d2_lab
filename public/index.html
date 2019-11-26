@@ -11,9 +11,14 @@
     <body>
         <div id="app">
             <h1>Countriessss</h1>
-            <div class="population">
+            <section class="population">
                 <h3>Total population: {{ totalPopulation }}</h3> 
-            </div>
+            </section>
+            <section class="country-selector">
+                <select class="country-select" v-model="selected">
+                    <option v-for="country in countries" >{{ country.name }}</option>
+                </select>
+            </section>
         </div>
     </body>
 </html>
