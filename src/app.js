@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         el: "#app",
         data: {
             countries: [],
-            selected: {},
+            selected: null,
         },
         computed: {
             totalPopulation: function() {

@@ -16,8 +16,13 @@
             </section>
             <section class="country-selector">
                 <select class="country-select" v-model="selected">
-                    <option v-for="country in countries" >{{ country.name }}</option>
+                    <option v-bind:value="null">No country selected</option>
+                    <option v-for="country in countries" v-bind:value="country" >{{ country.name }}</option>
                 </select>
+            </section>
+            <section class="selected-country" v-if="selected != null">
+                <h4>{{ selected.name }}</h4>
+                <img v-bind:src="selected.flag" v-bind:alt="selected.name">
             </section>
         </div>
     </body>

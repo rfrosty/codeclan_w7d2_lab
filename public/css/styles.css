@@ -1,0 +1,10 @@
+.selected-country {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 40px;
+}
+
+.selected-country img {
+    width: 40%;
+}
