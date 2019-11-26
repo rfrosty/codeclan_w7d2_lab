@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         computed: {
             totalPopulation: function() {
-                return 0;
+                return this.countries.reduce((total, country) => total + country.population, 0);
             }
         },
         mounted() {
