@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
         computed: {
             totalPopulation: function() {
                 return this.countries.reduce((total, country) => total + country.population, 0);
+            },
+            selectedNeighbours: function() {
+                if (this.selected != null) {
+                    return this.countries.filter(country => this.selected.borders.includes(country.alpha3Code));
+                }
+                return null;
             }
         },
         mounted() {

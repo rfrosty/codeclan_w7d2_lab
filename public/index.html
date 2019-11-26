@@ -30,6 +30,11 @@
                     <li v-for="country in favouriteCountries">{{country.name}}</li>
                 </ul>
             </section>
+            <section class="neightbour" v-if="selected != null">
+                <ul>
+                    <li v-for="value in selectedNeighbours">{{ value.name }}</li>
+                </ul>
+            </section>
         </div>
     </body>
 </html>
